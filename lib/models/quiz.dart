@@ -7,6 +7,7 @@ class Quiz {
   final int timeLimit; // in minutes
   final List<Question> questions;
   final DateTime createdAt;
+  final String? lessonId; // For lesson-based quizzes
 
   Quiz({
     required this.id,
@@ -17,6 +18,7 @@ class Quiz {
     required this.timeLimit,
     required this.questions,
     required this.createdAt,
+    this.lessonId,
   });
 
   factory Quiz.fromMap(Map<String, dynamic> map, String id) {
@@ -44,6 +46,7 @@ class Quiz {
               .toList() ??
           [],
       createdAt: createdAt,
+      lessonId: map['lessonId'],
     );
   }
 
@@ -56,6 +59,7 @@ class Quiz {
       'timeLimit': timeLimit,
       'questions': questions.map((q) => q.toMap()).toList(),
       'createdAt': createdAt.toIso8601String(),
+      'lessonId': lessonId,
     };
   }
 }

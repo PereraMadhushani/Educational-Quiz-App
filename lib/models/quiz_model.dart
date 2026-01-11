@@ -43,6 +43,7 @@ class Quiz {
   final String title;
   final String category;
   final String description;
+  final String? lessonId;
   final List<Question> questions;
   final int difficulty;
   final Duration timeLimit;
@@ -52,6 +53,7 @@ class Quiz {
     required this.title,
     required this.category,
     required this.description,
+    this.lessonId,
     required this.questions,
     required this.difficulty,
     required this.timeLimit,

@@ -32,7 +32,8 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => QuizProvider()),
       ],
       child: MaterialApp(
-        title: 'Chemistry Quiz App',
+        title: 'Quiz Master App',
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
           useMaterial3: true,
